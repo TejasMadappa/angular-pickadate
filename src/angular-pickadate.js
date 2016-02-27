@@ -250,7 +250,8 @@
           minDate: '=',
           maxDate: '=',
           disabledDates: '=',
-          weekStartsOn: '='
+          weekStartsOn: '=',
+          onDateSelect: '&'
         },
 
         link: function(scope, element, attrs, ngModel)  {
@@ -273,7 +274,7 @@
             selectedDates = allowMultiple ? toggleDate(dateObj, selectedDates) : [dateObj];
 
             setViewValue(selectedDates);
-
+            scope.onDateSelect(dateObj);
             scope.changeMonth(dateObj.monthOffset);
             scope.displayPicker = !wantsModal;
           };

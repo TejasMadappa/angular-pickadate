@@ -258,18 +258,16 @@
                         '</a>' +
                     '</div>' + 
                     '<div class="pickadate-main">' +
-                        // '<div class="pickadate-main">' +
-                            '<div class="pickadate-head">' +
-                                '<div class="pickadate-cell" ng-repeat="dayName in dayNames">' +
-                                    '{{dayName}}' + 
-                                '</div>' + 
-                            '</div>' +
-                            '<div class="pickadate-body">' +
-                                '<div ng-repeat="dateObj in dates" ng-click="setDate(dateObj)" ng-class="classesFor(dateObj)" class="pickadate-cell">' +
-                                    '<div class="pickadate-entry">{{dateObj.date | date:"d"}}</div>' + 
-                                '</div>' + 
-                            '</div>' +
-                        // '</div>' + 
+                        '<div class="pickadate-head">' +
+                            '<div class="pickadate-cell" ng-repeat="dayName in dayNames">' +
+                                '{{dayName}}' + 
+                            '</div>' + 
+                        '</div>' +
+                        '<div class="pickadate-body">' +
+                            '<div ng-repeat="dateObj in dates" ng-click="setDate(dateObj)" ng-class="classesFor(dateObj)" class="pickadate-cell">' +
+                                '<div class="pickadate-entry">{{dateObj.date | date:"d"}}</div>' + 
+                            '</div>' + 
+                        '</div>' +
                     '</div>' + 
                 '</div>';
             return {

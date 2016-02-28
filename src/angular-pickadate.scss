@@ -6,5 +6,8 @@
     .pickadate-cell {
         width: (100%)/7;
         display: inline-block;
+        .pickadate-entry {
+            cursor: pointer;
+        }
     }
 }

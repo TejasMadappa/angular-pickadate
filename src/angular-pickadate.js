@@ -9,9 +9,9 @@
 
     function map(items, property) {
         var mappedArray = [];
-        angular.forEach(items, function(item) {
+        angular.forEach(items, function(item, key) {
             mappedArray.push(angular.isFunction(property) ?
-                property(item) : item[property]);
+                property(item, key) : item[property]);
         });
         return mappedArray;
     }
@@ -196,7 +196,8 @@
                             enabled: !(disabled ||
                                 outOfMinRange ||
                                 outOfMaxRange ||
-                                outOfMonth)
+                                outOfMonth),
+
                         };
                     },
                     buildDates: function(year, month, options) {
@@ -351,6 +352,8 @@
                     };
                     scope.changeMonth = function(offset) {
                         if (!offset) return;
+                        if (offset > 0 && !$scope.allowNextMonth) {return;}
+                        if (offset < 0 && !$scope.allowPrevMonth) {return;}
                         // If the current date is January 31th, setting the month to date.getMonth() + 1
                         // sets the date to March the 3rd, since the date object adds 30 days to the current
                         // date. Settings the date to the 2nd day of the month is a workaround to prevent this

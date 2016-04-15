@@ -417,6 +417,10 @@
                                 .push(
                                     'pickadate-today'
                                 );
+                            if (!date.today && date.enabled) date.classNames
+                                .push(
+                                    'pickadate-future'
+                                );
                             if (date.disabled) date
                                 .classNames.push(
                                     'pickadate-unavailable'

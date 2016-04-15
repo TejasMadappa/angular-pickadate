@@ -356,6 +356,7 @@
               date.classNames = [date.enabled ? 'pickadate-enabled' : 'pickadate-disabled'];
 
               if (date.today)    date.classNames.push('pickadate-today');
+              if (!date.today && date.enabled) {date.classNames.push('pickadate-future');}
               if (date.disabled) date.classNames.push('pickadate-unavailable');
 
               return date;

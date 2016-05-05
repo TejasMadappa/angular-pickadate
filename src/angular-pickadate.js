@@ -116,13 +116,13 @@
                     parseDate: function(dateString) {
                         if (!dateString) return;
 
-                        if (moment && moment.isMoment(dateString)) {
-                            return dateString.toDate();
-                        }
+                        // if (moment && moment.isMoment(dateString)) {
+                        //     return dateString.toDate();
+                        // }
 
-                        if (dateString instanceof Date) {
-                            return dateString;
-                        }
+                        // if (dateString instanceof Date) {
+                        //     return dateString;
+                        // }
 
                         if (angular.isDate(dateString)) {
                             return new Date(dateString);

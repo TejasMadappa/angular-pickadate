@@ -115,8 +115,15 @@
                 return {
                     parseDate: function(dateString) {
                         if (!dateString) return;
-                        if (angular.isDate(dateString))
+
+                        if (dateString instanceof Date) {
+                            return dateString;
+                        }
+
+                        if (angular.isDate(dateString)) {
                             return new Date(dateString);
+                        }
+                        
                         var formatRegex = '(dd|MM|yyyy)',
                             separator = format.match(
                                 /[-|/]/)[0],
@@ -322,9 +329,7 @@
                         } else if (ngModel.$viewValue) {
                             selectedDates = [ngModel.$viewValue];
                         }
-                        scope.currentDate = dateHelper.parseDate(
-                            scope.defaultDate ||
-                            selectedDates[0]) || new Date();
+                        scope.currentDate = dateHelper.parseDate(scope.defaultDate || selectedDates[0]) || new Date();
                         dateHelper.setRestrictions(scope);
                         selectedDates = map(selectedDates,
                             function(date) {

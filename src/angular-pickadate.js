@@ -116,6 +116,10 @@
                     parseDate: function(dateString) {
                         if (!dateString) return;
 
+                        if (moment && moment.isMoment(dateString)) {
+                            return dateString.toDate();
+                        }
+
                         if (dateString instanceof Date) {
                             return dateString;
                         }

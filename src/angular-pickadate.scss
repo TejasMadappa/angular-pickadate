@@ -1,10 +1,11 @@
+$pickadateCalDayWidth: percentage(100/7)
 .pickadate-main {
     width: 100%;
     .pickadate-head {
         width: 100%;
     }
     .pickadate-cell {
-        width: (100/7)%;
+        width: $pickadateCalDayWidth;
         display: inline-block;
         .pickadate-entry {
             cursor: pointer;

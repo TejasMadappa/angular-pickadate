@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0; 
 }
-.pickadate-cell li {
+.pickadate-cell {
     display: block;
     float: left;
     border: 1px solid #DCDCDC;
@@ -36,11 +36,11 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box; 
 }
-.pickadate-cell li:nth-child(7n+0) {
+.pickadate-cell:nth-child(7n+0) {
     border-right: 1px solid #DCDCDC; 
 }
 
-.pickadate-cell li:nth-child(1), .pickadate-cell li:nth-child(8), .pickadate-cell li:nth-child(15), .pickadate-cell li:nth-child(22), .pickadate-cell li:nth-child(29), .pickadate-cell li:nth-child(36) {
+.pickadate-cell:nth-child(1), .pickadate-cell li:nth-child(8), .pickadate-cell li:nth-child(15), .pickadate-cell li:nth-child(22), .pickadate-cell li:nth-child(29), .pickadate-cell li:nth-child(36) {
     border-left: 1px solid #DCDCDC; 
 }
 .pickadate-cell .pickadate-disabled {
@@ -83,18 +83,19 @@
     width: 100%; 
 }
 .pickadate-controls .pickadate-next {
-    float: right; }
-    .pickadate-controls a {
-        text-decoration: none;
-        font-size: 0.9em; 
-    }
+    float: right; 
+}
+.pickadate-controls a {
+    text-decoration: none;
+    font-size: 0.9em; 
+}
 
-    .pickadate-modal {
-        position: absolute;
-        background-color: #fff;
-        width: 300px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 0 5px 5px 5px;
-        z-index: 1000; 
-    }
+.pickadate-modal {
+    position: absolute;
+    background-color: #fff;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 5px 5px 5px;
+    z-index: 1000; 
+}

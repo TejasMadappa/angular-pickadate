@@ -279,7 +279,7 @@
                             '<div class="pickadate-body">' +
                                 '<div ng-repeat="dateObj in dates" ng-click="setDate(dateObj)" ng-class="classesFor(dateObj)" class="pickadate-cell">' +
                                     '<div class="pickadate-entry-container">' +
-                                        '<div class="pickadate-entry">{{dateObj.date | date:"d"}}</div>' + 
+                                        '<div class="pickadate-entry" tabindex="0" ng-keypress="setDate(dateObj)">{{dateObj.date | date:"d"}}</div>' + 
                                     '</div>' +
                                 '</div>' + 
                             '</div>' +
